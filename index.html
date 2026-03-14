@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/auxiliar.js"></script>
+    <script src="./js/app.js"></script>
+</head>
+<body class="bg-blue-900 text-gray-100">
+    <section class="w-96 mx-auto mt-10 bg-gray-900 p-10">
+        <div>
+            <input type="text" name="nueva-tarea" placeholder="Nueva tarea..." class="p-3 rounded-lg text-black">
+            <button class="p-3 bg-green-800 rounded-lg" data-name="btn-guardar">Guardar</button>
+        </div>
+        <h3 class="text-gray-500 text-3xl mt-4">Tareas</h3>
+    <ul class="mt-4">
+        <li class="flex justify-between items-center">
+            <span>Tarea 1: Sacar al perro</span> 
+            <button class="bg-red-900 block px-3 rounded-lg">x</button>
+        </li>
+    </ul>
+    <button class="w-full bg-red-800 rounded-lg">Limpiar todo</button>
+    </section>
+</body>
+</html>
