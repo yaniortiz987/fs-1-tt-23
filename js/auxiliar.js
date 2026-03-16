@@ -1,1 +1,1 @@
-var valor = 1000
+var valor = 10000
