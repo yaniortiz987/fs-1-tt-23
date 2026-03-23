@@ -24,8 +24,33 @@ export function guardarTarea(evento){
 btnGuardar.addEventListener("click", guardarTarea);
 
 btnLimpiar.addEventListener("click", function(evento){
-    listadoTareas.innerHTML = ""
-    guardar("estados", "[]")
+
+    Swal.fire({
+        title: "Desea borrar todas las tareas?",
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: "Borrar",
+        denyButtonText: `No borrar`
+    }).then(function(objeto) {
+        console.log(objeto);
+        if (objeto.isConfirmed) {
+            Swal.fire({
+                title: "Borrado total!",
+                text: "Hemos eliminado todas las tareas",
+                icon: "success"
+            });
+            listadoTareas.innerHTML = "";
+            guardar("estados", []);
+        } else if (objeto.isDenied) {
+            Swal.fire({
+                title: "No borrado!",
+                text: "Hemos mantenido todas las tareas",
+                icon: "error"
+            });
+        }
+    });
+
+
 })
 
 function recuperarTodo(){
@@ -37,7 +62,7 @@ function recuperarTodo(){
     </li>`
         }
     )
-    listadoTareas.insertAdjacentHTML("beforeend", mostar.join(""))
+    listadoTareas.insertAdjacentHTML("beforeend", mostrar.join(""))
 }
 
 
@@ -81,6 +106,8 @@ recuperarTodo()
 )
     }
     , 3000)*/
+
+
 
 
 
