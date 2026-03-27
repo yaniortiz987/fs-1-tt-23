@@ -39,13 +39,23 @@ Este proyecto es completamente frontend y no requiere Node.js, npm ni ningún en
 Esta aplicación es una lista de tareas (To-Do List) sencilla y moderna, diseñada para gestionar tareas diarias de forma eficiente desde el navegador. Permite agregar, visualizar, eliminar y limpiar tareas, manteniendo la información almacenada localmente para que persista entre sesiones.
 
 
+
 ### ✨ Funcionalidades principales
 
 - ➕ **Agregar tarea**: El usuario puede escribir una nueva tarea y guardarla. La tarea se añade a la lista y se almacena en LocalStorage.
+
+#### Botón Guardar
+
+Así se visualiza el botón para guardar una tarea:
+
+```html
+<button class="p-3 bg-green-800 rounded-lg" data-name="btn-guardar">Guardar</button>
+```
+
 - 👀 **Visualizar tareas**: Al cargar la página, se muestran todas las tareas guardadas previamente.
 - ❌ **Eliminar tarea individual**: Cada tarea tiene un botón para eliminarla de la lista y del almacenamiento.
 - 🧹 **Limpiar todas las tareas**: Un botón permite borrar todas las tareas de la lista y del almacenamiento local.
-- 🔔 **Notificación visual**: (Pendiente de implementar) Se puede agregar una notificación al crear una tarea.
+- 🔔 **Notificación visual**: Se muestra una notificación visual al crear una tarea.
 
 
 ### 🗂️ Estructura del proyecto
