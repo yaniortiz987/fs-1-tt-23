@@ -8,13 +8,16 @@
 - 📜 **JavaScript (ES6, módulos)**: Lógica de la aplicación, manipulación del DOM y gestión de eventos.
 - 🎨 **Tailwind CSS**: Framework de utilidades para estilos rápidos y responsivos (vía CDN).
 - 💾 **LocalStorage**: Persistencia de datos en el navegador para guardar el historial de tareas.
+- 🧁 **SweetAlert2**: Librería para mostrar diálogos y confirmaciones visuales.
+- 🍞 **Toastify JS**: Librería para mostrar notificaciones tipo toast al crear tareas.
 
 
 ## 🌐 Dependencias externas y APIs
 
-- 💾 **LocalStorage**: Se utiliza la API nativa del navegador para almacenar y recuperar las tareas de forma persistente.
+- 💾 **LocalStorage**: API nativa del navegador para almacenar y recuperar las tareas de forma persistente.
 - 🎨 **Tailwind CSS**: Se carga desde un CDN externo para los estilos, no requiere instalación local.
-- 🧁 **SweetAlert2**: Se utiliza para mostrar diálogos y notificaciones visuales al usuario (confirmaciones y alertas), manteniendo la lógica de control con sentencias if para mayor claridad.
+- 🧁 **SweetAlert2**: Para mostrar diálogos y notificaciones visuales al usuario (confirmaciones y alertas), manteniendo la lógica de control con sentencias if para mayor claridad.
+- 🍞 **Toastify JS**: Para mostrar notificaciones emergentes (toast) al crear nuevas tareas.
 - 🚫 **No se utiliza ninguna API externa adicional** para la lógica de la aplicación.
 
 
@@ -35,27 +38,17 @@ Este proyecto es completamente frontend y no requiere Node.js, npm ni ningún en
 
 ## 📋 Descripción del proyecto
 
-
-Esta aplicación es una lista de tareas (To-Do List) sencilla y moderna, diseñada para gestionar tareas diarias de forma eficiente desde el navegador. Permite agregar, visualizar, eliminar y limpiar tareas, manteniendo la información almacenada localmente para que persista entre sesiones.
+Esta aplicación es una lista de tareas (To-Do List) interactiva y moderna, diseñada para gestionar tareas diarias de forma eficiente desde el navegador. Permite agregar, visualizar, eliminar y limpiar tareas, mostrando notificaciones visuales y confirmaciones para mejorar la experiencia de usuario. Toda la información se almacena localmente para que persista entre sesiones.
 
 
 
 ### ✨ Funcionalidades principales
 
-- ➕ **Agregar tarea**: El usuario puede escribir una nueva tarea y guardarla. La tarea se añade a la lista y se almacena en LocalStorage.
-
-#### Botón Guardar
-
-Así se visualiza el botón para guardar una tarea:
-
-```html
-<button class="p-3 bg-green-800 rounded-lg" data-name="btn-guardar">Guardar</button>
-```
-
+- ➕ **Agregar tarea**: El usuario puede escribir una nueva tarea y guardarla. La tarea se añade a la lista, se almacena en LocalStorage y se muestra una notificación tipo toast.
 - 👀 **Visualizar tareas**: Al cargar la página, se muestran todas las tareas guardadas previamente.
 - ❌ **Eliminar tarea individual**: Cada tarea tiene un botón para eliminarla de la lista y del almacenamiento.
-- 🧹 **Limpiar todas las tareas**: Un botón permite borrar todas las tareas de la lista y del almacenamiento local.
-- 🔔 **Notificación visual**: Se muestra una notificación visual al crear una tarea.
+- 🧹 **Limpiar todas las tareas**: Un botón permite borrar todas las tareas de la lista y del almacenamiento local, con confirmación visual mediante SweetAlert2.
+- 🔔 **Notificación visual**: Se muestra una notificación toast cada vez que se crea una nueva tarea.
 
 
 ### 🗂️ Estructura del proyecto
@@ -68,11 +61,10 @@ Así se visualiza el botón para guardar una tarea:
 
 ### ⚙️ ¿Cómo funciona?
 
-
 1. 📝 El usuario ingresa una tarea y pulsa "Guardar".
-2. ➕ La tarea se añade a la lista visual y se almacena en LocalStorage.
+2. ➕ La tarea se añade a la lista visual, se almacena en LocalStorage y se muestra una notificación toast.
 3. 🔄 Al recargar la página, las tareas guardadas se muestran automáticamente.
-4. ❌ Se pueden eliminar tareas individuales o limpiar toda la lista.
+4. ❌ Se pueden eliminar tareas individuales o limpiar toda la lista (con confirmación visual).
 
 
 ### 🧑‍💻 Uso
